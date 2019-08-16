@@ -10,14 +10,29 @@ PM> Install-Package YrinLeung.NLog.QiNiuLogTarget
 
 #### 2 使用方法
 
-> NLog的Target配置
+> NLog的配置
 
 ```xml
- <target xsi:type="QiNiuLogService"
-           name="qiniulog"
-           authorization="test-authorization"
-           queueName="queue_service"//
-           layout="serviceName=testservice1	message=${message}	logLevel=${level}	stackTrace=${stacktrace}	date=${date}" />
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      autoReload="true">
+
+  <extensions>
+    <add assembly="NLog.QiNiuLogTarget"/>
+  </extensions>
+  
+  <targets>
+    <target xsi:type="QiNiuLogService"
+            name="qiniulog"
+            authorization="test-authorization"
+            queueName="queue_service"
+            layout="serviceName=testservice1	message=${message}	logLevel=${level}	stackTrace=${stacktrace}	date=${date}" />
+  </targets>
+  <rules>
+    <logger name="*" minlevel="Error" writeTo="qiniulog" />
+  </rules>
+</nlog>
 
 ```
 > 参数说明
