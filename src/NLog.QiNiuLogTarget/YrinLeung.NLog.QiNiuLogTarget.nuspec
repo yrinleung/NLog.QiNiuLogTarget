@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>YrinLeung.NLog.QiNiuLogTarget</id>
+    <version>1.0.0</version>
+    <title>YrinLeung.NLog.QiNiuLogTarget</title>
+    <authors>YrinLeung</authors>
+    <owners>YrinLeung</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      NLog集成七牛云智能日志上传；
+      使用可以查看： https://github.com/yrinleung/NLog.QiNiuLogTarget
+    </description>
+    <releaseNotes>
+      NLog集成七牛云智能日志上传
+    </releaseNotes>
+    <copyright>YrinLeung</copyright>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/yrinleung/NLog.QiNiuLogTarget</projectUrl>
+    <repository type="git" url="https://github.com/yrinleung/NLog.QiNiuLogTarget"  />
+    <serviceable>true</serviceable>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" >
+        <dependency id="NLog" version="4.6.0" />
+        <dependency id="Newtonsoft.Json" version="12.0.1" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\NLog.QiNiuLogTarget.dll" target="lib\netstandard2.0\NLog.QiNiuLogTarget.dll" />
+    <file src="bin\Release\netstandard2.0\NLog.QiNiuLogTarget.xml" target="lib\netstandard2.0\NLog.QiNiuLogTarget.xml" />
+  </files>
+</package>
