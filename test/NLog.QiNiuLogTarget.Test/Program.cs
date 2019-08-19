@@ -9,7 +9,14 @@ namespace NLog.QiNiuLogTarget.Test
             var log = LogManager.GetCurrentClassLogger();
             while (true)
             {
-                log.Error("high Hkaos four");
+                try
+                {
+                    throw new Exception("test");
+                }
+                catch (Exception ex)
+                {
+                    log.Error(ex);
+                }
                 Console.WriteLine("success");
                 Console.ReadKey();
             }
