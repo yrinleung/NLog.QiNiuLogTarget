@@ -49,8 +49,7 @@ queueName | 是 | 队列名称（实时仓库名称）
 parameter | 是 | 日志内容的字段，name=>字段名称，layout=>字段内容
 
 #### 3 注意
-- layout中的内容为七牛云数据推送接口中的请求内容，详情请查看[官方API](https://developer.qiniu.com/insight/api/4749/data-push-api)。  
-- 日期类型对应七牛云的data类型需要转成“yyyy-MM-ddTHH\:mm\:ss.fffZ”这种格式
+- 七牛云的data类型需要转成“yyyy-MM-ddTHH\:mm\:ss.fffZ”
 
 
 #### 4 Demo
